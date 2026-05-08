@@ -58,7 +58,7 @@ void rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max)
 #endif
         // HOST状态灯
 #ifdef RGB_MATRIX_INDICATORS_HOST
-        if (1) {
+        if (sys_led_on_flag) {
             if (usb_working()) { // USB WORKING
                 rgb_matrix_set_color(RGB_MATRIX_INDICATORS_HOST, RGB_GREEN);
             } else { // BLE
